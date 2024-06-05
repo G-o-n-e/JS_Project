@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <link rel="stylesheet" href="./assets/styles/responsive.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+
+    <section class="navigation">
+      <nav>
+        <ul>
+          <a href="#RPS">
+            <li>RPS</li>
+          </a>
+          <a href="#cal">
+            <li>Calculator</li>
+          </a>
+          <a href="#tic">
+            <li>Tic</li>
+          </a>
+
+          <a href="#QR">
+            <li>QR</li>
+          </a>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- RPS -->
+
+    <section id="RPS" class="RPS">
+      <article class="rps-game-container">
+        <h1 class="rps-heading">Rock Paper Scissors</h1>
+        <div class="rps-choices">
+          <button class="rps-button" onclick="playGame('rock')">Rock</button>
+          <button class="rps-button" onclick="playGame('paper')">Paper</button>
+          <button class="rps-button" onclick="playGame('scissors')">
+            Scissors
+          </button>
+        </div>
+        <div class="rps-result" id="rps-result"></div>
+      </article>
+    </section>
+
+    <section id="cal">
+      <div class="calculator">
+        <input type="text" id="display" disabled />
+        <div class="buttons">
+          <button class="operator" onclick="clearDisplay()">AC</button>
+          <button class="operator" onclick="addToDisplay('%')">
+            <i class="fa-solid fa-percent"></i>
+          </button>
+          <button class="operator" onclick="deleteLastCharacter()">
+            <i class="fa-solid fa-delete-left"></i>
+          </button>
+          <button class="operator" onclick="addToDisplay('/')">
+            <i class="fa-solid fa-divide"></i>
+          </button>
+          <button onclick="addToDisplay('7')">7</button>
+          <button onclick="addToDisplay('8')">8</button>
+          <button onclick="addToDisplay('9')">9</button>
+          <button class="operator" onclick="addToDisplay('*')">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <button onclick="addToDisplay('6')">6</button>
+          <button onclick="addToDisplay('5')">5</button>
+          <button onclick="addToDisplay('4')">4</button>
+          <button class="operator" onclick="addToDisplay('-')">
+            <i class="fa-solid fa-minus"></i>
+          </button>
+          <button onclick="addToDisplay('1')">1</button>
+          <button onclick="addToDisplay('2')">2</button>
+          <button onclick="addToDisplay('3')">3</button>
+          <button class="operator" onclick="addToDisplay('+')">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <button onclick="addToDisplay('00')">00</button>
+          <button onclick="addToDisplay('0')">0</button>
+          <button onclick="addToDisplay('.')">.</button>
+          <button class="operator" onclick="calculateResult()">
+            <i class="fa-solid fa-equals"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tic-Tac-Toe -->
+
+    <section id="tic" class="tic-tac-toe">
+      <div class="container">
+        <h1>Tic Tac Toe</h1>
+        <div id="board" class="board">
+          <div class="cell" onclick="cellClick(0)"></div>
+          <div class="cell" onclick="cellClick(1)"></div>
+          <div class="cell" onclick="cellClick(2)"></div>
+          <div class="cell" onclick="cellClick(3)"></div>
+          <div class="cell" onclick="cellClick(4)"></div>
+          <div class="cell" onclick="cellClick(5)"></div>
+          <div class="cell" onclick="cellClick(6)"></div>
+          <div class="cell" onclick="cellClick(7)"></div>
+          <div class="cell" onclick="cellClick(8)"></div>
+        </div>
+        <div id="status" class="status">Your turn</div>
+        <button onclick="restart()" id="restartButton">Restart Game</button>
+      </div>
+    </section>
+
+    <!-- QR -->
+
+    <section class="qr-section">
+      <div id="QR" class="qr-container">
+        <label class="qr-head" for="qr-urlInput"
+          >შეიყვანეთ ლინკი ან რაიმე ტექსტი:</label
+        >
+        <input type="text" id="qr-urlInput" class="qr-input" />
+        <button class="qr-button" onclick="generateQRCode()">
+          QR კოდის დაგენერირება
+        </button>
+        <div id="qr-qrcode" class="qr-code"></div>
+      </div>
+    </section>
+    <script
+      src="https://kit.fontawesome.com/cbf53a7ded.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script src="./assets/JS/main.js"></script>
+  </body>
+</html>

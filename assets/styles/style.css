@@ -1,0 +1,280 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* NAV */
+
+.navigation {
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  margin: 25px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+/* RPS */
+
+.RPS {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #f5f7fa, #c3cfe2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.rps-game-container {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.rps-heading {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.rps-choices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.rps-button {
+  background: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.rps-button:hover {
+  background: #45a049;
+}
+
+.rps-result {
+  font-size: 18px;
+  margin-top: 20px;
+  color: #333;
+}
+
+.rps-result p {
+  margin: 10px 0;
+}
+
+/* Calc */
+
+.calculator {
+  width: 320px;
+  margin: 25vh auto;
+  height: auto;
+  padding: 40px 20px;
+  background-color: #c3cfe2;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.calculator input[type="text"] {
+  width: calc(100% - 40px);
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  outline: none;
+  background-color: white;
+}
+
+.calculator button {
+  width: calc(22% - 5px);
+  height: 45px;
+  margin: 8px 5px;
+  font-size: 18px;
+  border: none;
+  border-radius: 50px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.calculator button.operator {
+  background-color: #4caf50;
+  color: white;
+  transition: 0.5s ease;
+}
+
+.calculator button.operator:hover {
+  background-color: green;
+}
+
+/* Tic Tac Toe */
+
+.tic-tac-toe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 35px;
+}
+
+.container {
+  text-align: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 5px;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #c3cfe2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.status {
+  margin-top: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#restartButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 15px;
+  transition: 0.5s ease;
+  color: white;
+}
+
+#restartButton:hover {
+  background-color: green;
+}
+
+/* QR */
+
+.qr-section {
+  background-color: white;
+}
+
+.qr-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #c3cfe2;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  max-width: 400px;
+  margin: 10vh auto;
+  color: #f5f5f5;
+}
+
+.qr-container label {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.qr-container .qr-head {
+  font-size: 22px;
+  text-align: center;
+}
+
+.qr-input {
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  font-size: 20px;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+
+.qr-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.qr-button:hover {
+  background-color: green;
+}
+
+.qr-code {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #c3cfe2;
+  border: 1px solid #4caf50;
+  border-radius: 4px;
+}
